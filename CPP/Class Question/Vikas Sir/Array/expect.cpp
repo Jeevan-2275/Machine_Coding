@@ -1,3 +1,5 @@
+// output=Prefix :1 1 2 6 Suffix : 24 12 4 1 Result : 24 12 8 6
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -18,16 +20,16 @@ int main(){
 
     int prefixProduct = 1;
     for(int i=0;i<n;i++){
+        prefix[i] = prefixProduct;
         prefixProduct *= arr[i];
-        prefix[i] = prefixProduct * arr[i];
     }
     cout<<"Prefix : ";
     print(prefix);
     cout<<endl;
     int suffixProduct = 1;
     for(int i=n-1;i>=0;i--){
+        suffix[i] = suffixProduct;
         suffixProduct *= arr[i];
-        suffix[i] = suffixProduct * arr[i];
     }
     cout<<"Suffix : ";
     print(suffix);
@@ -40,3 +42,7 @@ int main(){
     cout<<endl;
     return 0;
  }
+
+//  output =Prefix : 1 1 2 6
+// Suffix : 24 12 4 1
+// Result : 24 12 8 6

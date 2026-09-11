@@ -1,6 +1,5 @@
-// import React from 'react'
-// import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Counter from './components/1.counter/counter.jsx'
+import  SearchList from './components/2.Searchable List/Searchable.jsx';
+// import Counter from './components/1.counter/counter.jsx';
 import './App.css'
 
 const  App = () => {
@@ -8,10 +7,11 @@ const  App = () => {
 
   return (
    <div>
-    <Counter />
+    {/* <Counter /> */}
+    <SearchList />
    </div>
   )
 }
 
-export default App
+export default App;
 

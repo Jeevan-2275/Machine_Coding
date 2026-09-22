@@ -5,8 +5,8 @@ import ColorChange from './components/4. Create Button that change color when cl
 import './App.css'
 // import Form from './components/5.Build a form with multiple fields and validation. (useState)/Form.jsx';
 // import Fetch from './components/6.Pagination/Fetch.jsx';
-import Pagination from './components/7.Drag Drop/FileUpload.jsx';
-
+// import Pagination from './components/7.Drag Drop/FileUpload.jsx';
+import Todo from './components/8.Functional-Todo/Todo.jsx';
 const  App = () => {
 
 
@@ -18,7 +18,8 @@ const  App = () => {
     {/* { <ColorChange /> } */}
     {/* <Form /> */}
     {/* {<Fetch /> } */}
-    { <Pagination /> }
+    {/* { <Pagination /> } */}
+<Todo />
    </div>
   )
 }

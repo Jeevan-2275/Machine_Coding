@@ -9,19 +9,19 @@ const fetch = () => {
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(10);
     const [search, setSearch] = useState("");
-    const [sortorder, setSortOrder] = useState("asc");
+    const [sortOrder, setSortOrder] = useState("asc");
 
 
     const filterData = data.filter((user) => {
-        const fullName = `${user.firstName} ${user.lastNamw}`.toLowerCase();
+        const fullName = `${user.firstName} ${user.lastName}`.toLowerCase();
         return fullName.includes(search.toLowerCase())
     })
 
 
-    const sorteduser = [...filterData].sort((a,b) => {
+    const sortedUser = [...filterData].sort((a,b) => {
         const nameA = a.firstName.toLowerCase();
         const nameB = b.firstName.toLowerCase();
-        if (sortorder === "asc") {
+        if (sortOrder === "asc") {
             return nameA.localeCompare(nameB);
         } else {
             return nameB.localeCompare(nameA);
@@ -29,14 +29,14 @@ const fetch = () => {
     })
 
    const startIndex = (page - 1) * limit;
-   const endindex = startIndex + limit;
+   const endIndex = startIndex + limit;
    const currentUser = sortedUser.slice(startIndex, endIndex);
-   const totalPages = Math.ceil(data.length / limit);
+   const totalPage = Math.ceil(data.length / limit);
 
    const fetchApi = async () => {
     try{
         setLoading(true);
-        const data = await axios.get("https://dummayjson.com/users");
+        const data = await axios.get("https://dummyjson.com/users");
         setData(data.data.users);
     }catch(error){
         console.log("error occured",error)
@@ -107,4 +107,4 @@ const fetch = () => {
   )
 }
 
-export default Fetch
+export default fetch

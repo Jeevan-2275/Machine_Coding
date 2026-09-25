@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Pagination = ({ totalPages, currentPage,onPageChange ,limit, onLimitChange}) => {
+const Pagination = ({ totalPage, currentPage,onPageChange ,limit, onLimitChange}) => {
 
 const pages = [];
-for(let i=1;i<=totalPages;i++){
+for(let i=1;i<=totalPage;i++){
     pages.push(i);
 }
 return (

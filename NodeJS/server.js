@@ -1,4 +1,5 @@
 const express =  require('express');
+const crud = require('./Day1-GET-POST/crud');
 const app =  express();
 const cors = require('cors');
 
@@ -8,6 +9,7 @@ app.use(express.json());
 app.get('/', (req,res) =>{
     res.send('hello world');
 })
+app.use('/api',crud);
 
 app.listen(3000,() => {
     console.log('server is runnig on port 3000');
